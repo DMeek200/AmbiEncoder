@@ -17,12 +17,12 @@
 //==============================================================================
 /**
 */
-class StartingPointAudioProcessor  : public AudioProcessor
+class AmbiEncoderAudioProcessor  : public AudioProcessor
 {
 public:
     //==============================================================================
-    StartingPointAudioProcessor();
-    ~StartingPointAudioProcessor();
+    AmbiEncoderAudioProcessor();
+    ~AmbiEncoderAudioProcessor();
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -58,7 +58,7 @@ public:
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StartingPointAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AmbiEncoderAudioProcessor)
 };
 
 

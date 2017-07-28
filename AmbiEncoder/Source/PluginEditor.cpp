@@ -27,7 +27,7 @@
 //[/MiscUserDefs]
 
 //==============================================================================
-StartingPointAudioProcessorEditor::StartingPointAudioProcessorEditor (StartingPointAudioProcessor& p)
+AmbiEncoderAudioProcessorEditor::AmbiEncoderAudioProcessorEditor (AmbiEncoderAudioProcessor& p)
     : AudioProcessorEditor(p), processor(p)
 {
     //[Constructor_pre] You can add your own custom stuff here..
@@ -45,7 +45,7 @@ StartingPointAudioProcessorEditor::StartingPointAudioProcessorEditor (StartingPo
     //[/Constructor]
 }
 
-StartingPointAudioProcessorEditor::~StartingPointAudioProcessorEditor()
+AmbiEncoderAudioProcessorEditor::~AmbiEncoderAudioProcessorEditor()
 {
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
@@ -57,7 +57,7 @@ StartingPointAudioProcessorEditor::~StartingPointAudioProcessorEditor()
 }
 
 //==============================================================================
-void StartingPointAudioProcessorEditor::paint (Graphics& g)
+void AmbiEncoderAudioProcessorEditor::paint (Graphics& g)
 {
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
@@ -68,7 +68,7 @@ void StartingPointAudioProcessorEditor::paint (Graphics& g)
     //[/UserPaint]
 }
 
-void StartingPointAudioProcessorEditor::resized()
+void AmbiEncoderAudioProcessorEditor::resized()
 {
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
@@ -80,7 +80,7 @@ void StartingPointAudioProcessorEditor::resized()
 
 
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
-void StartingPointAudioProcessorEditor::timerCallback()
+void AmbiEncoderAudioProcessorEditor::timerCallback()
 {
     //exchange any data you want between UI elements and the Plugin "ourProcessor"
 }
@@ -97,7 +97,7 @@ void StartingPointAudioProcessorEditor::timerCallback()
 
 BEGIN_JUCER_METADATA
 
-<JUCER_COMPONENT documentType="Component" className="StartingPointAudioProcessorEditor"
+<JUCER_COMPONENT documentType="Component" className="AmbiEncoderAudioProcessorEditor"
                  componentName="" parentClasses="public AudioProcessorEditor, public Timer"
                  constructorParams="StereoPannerAudioProcessor&amp; p" variableInitialisers="AudioProcessorEditor(p), processor(p)"
                  snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
