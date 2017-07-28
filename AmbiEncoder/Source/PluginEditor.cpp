@@ -93,6 +93,7 @@ void AmbiEncoderAudioProcessorEditor::sliderValueChanged (Slider* sliderThatWasM
     if (sliderThatWasMoved == sliderPanPosition)
     {
         //[UserSliderCode_sliderPanPosition] -- add your slider handling code here..
+		processor.panPosition = sliderPanPosition->getValue();
         //[/UserSliderCode_sliderPanPosition]
     }
 
