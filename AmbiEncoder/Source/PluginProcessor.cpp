@@ -139,6 +139,7 @@ void AmbiEncoderAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuf
 	// Convert pan position in degrees to radians
 	float pi = 3.14159;
 	float azimuth = (pi / 180.f) * panPosition;
+	float vertical = (pi / 180.f) * verticalPosition;
 
 	// Get a pointer to each of the Ambisonic channels
 	float* channelDataW = buffer.getWritePointer(0);
@@ -155,6 +156,9 @@ void AmbiEncoderAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuf
 		channelDataW[i] = audioIn * 0.707;
 		channelDataX[i] = audioIn * cos(azimuth);
 		channelDataY[i] = audioIn * sin(azimuth);
+
+		// Vertical coding
+		channelDataZ[i] = audioIn * sin(vertical);
 
 
     }
